@@ -11,14 +11,14 @@
 	</servlet>
 	<servlet-mapping>
 		<servlet-name>MyServlet</servlet-name>
-		<url-pattern>/MyServlet</url-pattern>
+		<url-pattern>/MyServlet.do</url-pattern>
 	</servlet-mapping>
 	<context-param>
 		<param-name>breed</param-name>
 		<param-value>great Dan</param-value>
 	</context-param>
 	<listener>
-	<listener-class>com.aqib.MyServlet.SevletListener</listener-class>
+	<listener-class>com.aqib.MyServlet.ServletListener</listener-class>
 	</listener>
 	
 </web-app>

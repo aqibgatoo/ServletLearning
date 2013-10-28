@@ -7,12 +7,12 @@ import javax.servlet.ServletContextListener;
 public class ServletListener implements ServletContextListener {
 
 	@Override
-	public void contextDestroyed(ServletContextEvent event) {
+	public void contextDestroyed(ServletContextEvent arg0) {
 		
-		ServletContext context=(ServletContext) event.getServletContext();
+		ServletContext context=(ServletContext) arg0.getServletContext();
 		String breed=context.getInitParameter("breed");
 		Dog dog=new Dog(breed);
-		context.setAttribute("dog", dog);
+		context.setAttribute("dogBreed", dog);
 		
 	}
 

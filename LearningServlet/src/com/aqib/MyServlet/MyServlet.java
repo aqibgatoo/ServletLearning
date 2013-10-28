@@ -7,6 +7,7 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 /**
  * Servlet implementation class MyServlet
@@ -20,12 +21,14 @@ public class MyServlet extends HttpServlet {
 		response.setContentType("text/html");
 		PrintWriter printWriter = response.getWriter();
 
-		Dog dog= (Dog) getServletContext().getAttribute("dog");
+	 HttpSession session=request.getSession();
+	 if (session.isNew()) {
+		 
+		 printWriter.println("the session is not present");
 		
-		printWriter.println("<html>" + "<head>" + "<body>"
-				+ "<p>the breed of dog is</p> " +dog.getBreed()
-				+ "</body>" + "</head>" + "<html>");
-		printWriter.close();
+	}else{
+		printWriter.println("the session was already present");
+	}
 
 	}
 
