@@ -8,6 +8,7 @@ public class Dog {
 		this.dogBreed = dogBreed;
 
 	}
+
 	public Dog() {
 		// TODO Auto-generated constructor stub
 	}
