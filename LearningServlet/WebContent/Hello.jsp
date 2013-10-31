@@ -10,22 +10,8 @@
 <body>
 <%
 Dog d=new Dog("american dog");
-
-out.println(d.getBreed());
-
-
 %>
-<%
-String id=request.getParameter("id");
-if(id==null){%>
-	
-<p>id is null</p>
-	
-<%}else{ %>
-	
-<p>id is<%=id %></p>
-	
- <%}%>
-
 </body>
+<%@ include file="world.jsp" %>
+<jsp:include page="world.jsp"></jsp:include>
 </html>
