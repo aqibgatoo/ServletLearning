@@ -15,7 +15,17 @@ out.println(d.getBreed());
 
 
 %>
-
+<%
+String id=request.getParameter("id");
+if(id==null){%>
+	
+<p>id is null</p>
+	
+<%}else{ %>
+	
+<p>id is<%=id %></p>
+	
+ <%}%>
 
 </body>
 </html>
