@@ -11,14 +11,9 @@
 	</servlet>
 	<servlet-mapping>
 		<servlet-name>MyServlet</servlet-name>
-		<url-pattern>/MyServlet.do</url-pattern>
+		<url-pattern>/MyServlet</url-pattern>
 	</servlet-mapping>
-	<context-param>
-		<param-name>breed</param-name>
-		<param-value>great Dan</param-value>
-	</context-param>
-	<listener>
-	<listener-class>com.aqib.MyServlet.ServletListener</listener-class>
-	</listener>
+
+
 	
 </web-app>

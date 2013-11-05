@@ -18,18 +18,18 @@ public class MyServlet extends HttpServlet {
 	protected void doGet(HttpServletRequest request,
 			HttpServletResponse response) throws ServletException, IOException {
 
-		response.setContentType("text/html");
-		PrintWriter printWriter = response.getWriter();
+		String action = request.getParameter("action");
+		String page = null;
+		if (action.equals("login")) {
+			page = "/login.jsp";
+		} else if (action.equals("about")) {
+			page = "/about.jsp";
+		} else {
+			page = "/error.jsp";
 
-	 HttpSession session=request.getSession();
-	 if (session.isNew()) {
-		 
-		 printWriter.println("the session is not present");
-		
-	}else{
-		printWriter.println("the session was already present");
+		}
+
+		getServletContext().getRequestDispatcher(page).forward(request,
+				response);
 	}
-
-	}
-
 }
