@@ -28,7 +28,7 @@ public class MyServlet extends HttpServlet {
 			page = "/error.jsp";
 
 		}
-
+        
 		getServletContext().getRequestDispatcher(page).forward(request,
 				response);
 	}
